@@ -1,0 +1,348 @@
+/***************************************NUMERIC FUNCTION**************************************/
+1.ABS(): The ABS() function returns the absolute value of a number.
+
+Syntax:
+ABS(number)
+
+Example:Return the absolute value of a number:
+SELECT Abs(-243.5) AS AbsNum;
+Output:-243.5
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+2. ACOS(): The ACOS() function returns the arc cosine of a number.
+The specified number must be between -1 to 1, otherwise this function returns NULL. 
+
+Syntax:
+ACOS(number)
+
+Example:Return the arc cosine of a number:
+SELECT ACOS(0.25);
+Output:-
+1.318116071652818
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+3.ASIN(): The ASIN() function returns the arc sine of a number.
+The specified number must be between -1 to 1, otherwise this function returns NULL. 
+
+Syntax
+ASIN(number)
+Example: Return the arc sine of a number:
+
+SELECT ASIN(0.25);
+Output:
+0.25268025514207865
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+4.ATAN(): The ATAN() function returns the arc tangent of a number.
+
+Syntax
+ATAN(number)
+
+Example: Return the arc tangent of a number:
+
+SELECT ATAN(2.5);
+Output:
+1.1902899496825317
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+5.ATN2(): The ATN2() function returns the arc tangent of two numbers.
+
+Syntax
+ATN2(a, b)
+Example:Return the arc tangent of two values:
+
+SELECT ATN2(0.50, 1);
+Output: 
+0.46364760900080609
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+6.AVG(): The AVG() function returns the average value of an expression.
+
+Note: NULL values are ignored. 
+Syntax
+AVG(expression)
+Example: Return the average value for the "Price" column in the "Products" table:
+
+SELECT AVG(Price) AS AveragePrice FROM Products;
+Output:
+
+AveragePrice
+28.8663
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+7. CEILING(): The CEILING() function returns the smallest integer value that is larger than or equal to a number.
+Syntax:
+CEILING(number)
+
+Example: Return the smallest integer value that is greater than or equal to a number:
+
+SELECT CEILING(25.75) AS CeilValue;
+
+Output:
+CeilValue
+26
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+8.COUNT(): The COUNT() function returns the number of records returned by a select query.
+
+Note: NULL values are not counted.
+
+Syntax
+COUNT(expression)
+
+Example: Return the number of products in the "Products" table:
+
+SELECT COUNT(ProductID) AS NumberOfProducts FROM Products;
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+9.COS(): The COS() function returns the cosine of a number.
+
+Syntax:
+COS(number)
+Example: Return the cosine of a number:
+SELECT COS(2);
+Output:
+-0.41614683654714241
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+10. COT(): The COT() function returns the cotangent of a number.
+
+Syntax
+COT(number)
+
+Example: Return the cotangent of a number:
+
+SELECT COT(6);
+Output:
+-3.4363530041801278
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+11.DEGREES() : The DEGREES() function converts a value in radians to degrees.
+
+Syntax
+DEGREES(number)
+
+Example:Convert a radian value into degrees:
+
+SELECT DEGREES(2);
+Output:
+114
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+12.EXP(): The EXP() function returns e raised to the power of a specified number.
+
+The constant e (2.718281...), is the base of natural logarithms.
+
+Syntax:
+EXP(number)
+
+Example:Return e raised to the power of 1:
+
+SELECT EXP(2);
+Output:
+7.3890560989306504
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+13.FLOOR() :The FLOOR() function returns the largest integer value that is smaller than or equal to a number.
+
+Syntax
+FLOOR(number)
+
+Example:Return the largest integer value that is equal to or less than 25.75:
+
+SELECT FLOOR(25.75) AS FloorValue;
+Output:
+FloorValue
+25
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+14.LOG(): The LOG() function returns the natural logarithm of a specified number, or the logarithm of the number to the specified base.
+
+From SQL Server 2012, you can also change the base of the logarithm to another value by using the optional base parameter.
+
+Syntax
+LOG(number, base) -- Syntax for SQL Server
+Example
+Return the natural logarithm of 2 to a specified base (4):
+
+SELECT LOG(2, 4);
+Output:
+
+0.5
+
+OR:
+LOG(number) -- Syntax for Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse
+
+Example:Return the natural logarithm of 2:
+
+SELECT LOG(2);
+Output:
+
+0.69314718055994529
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+15.LOG10(): The LOG10() function returns the natural logarithm of a number to base 10.
+Syntax:
+LOG10(number)
+
+Example:Return the base-10 logarithm of 2:
+
+SELECT LOG10(2);
+Output:
+
+0.3010299956639812
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+16.MAX(): The MAX() function returns the maximum value in a set of values.
+
+Syntax
+MAX(expression)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+17. MIN(): The MIN() function returns the minimum value in a set of values.
+
+Syntax
+MIN(expression)
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+18.PI():The PI() function returns the value of PI.
+
+Syntax
+PI()
+
+Example:Return the value of PI:
+
+SELECT PI();
+Output:
+3.1415926535897931
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+19.POWER() :The POWER() function returns the value of a number raised to the power of another number.
+
+Syntax
+POWER(a, b)
+
+Example:Return 4 raised to the second power:
+
+SELECT POWER(4, 2);
+Output:
+16
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+20.  RADIANS() :The RADIANS() function converts a degree value into radians.
+
+Syntax
+RADIANS(number)
+Example:Convert a degree value into radians:
+
+SELECT RADIANS(150);
+Output:
+2
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+21.The RAND() function returns a random number between 0 (inclusive) and 1 (exclusive).
+
+Syntax:
+RAND(seed)
+
+Example:Return a random decimal number (no seed value - so it returns a completely random number >= 0 and <1):
+
+SELECT RAND();
+Output:
+0.41331485481580843
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+22.The ROUND() function rounds a number to a specified number of decimal places.
+
+Syntax
+ROUND(number, decimals, operation)
+
+Example:Round the number to 2 decimal places:
+SELECT ROUND(235.415, 2) AS RoundValue;
+
+Output:
+
+RoundValue
+235.420
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+23.The SIGN() function returns the sign of a number.
+
+This function will return one of the following:
+
+If number > 0, it returns 1
+If number = 0, it returns 0
+If number < 0, it returns -1
+Syntax
+SIGN(number)
+
+Example:Return the sign of a number:
+
+SELECT SIGN(255.5);
+Output:
+1.0
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+24.The SIN() function returns the sine of a number.
+
+Syntax
+SIN(number)
+
+Example:Return the sine of a number:
+
+SELECT SIN(2);
+Output:
+0.90929742682568171
+----------------------------------------------------------------------------------------------------------------------------------------------------
+25.The SQRT() function returns the square root of a number.
+
+Syntax
+SQRT(number)
+Example:Return the square root of a number:
+
+SELECT SQRT(64);
+Output:
+
+8.0
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+26.The SQUARE() function returns the square of a number.
+
+Syntax
+SQUARE(number)
+Example:Return the square of a number:
+
+SELECT SQUARE(64);
+Output:
+
+4096.0
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+27.The SUM() function calculates the sum of a set of values.
+
+Note: NULL values are ignored.
+
+Syntax
+SUM(expression)
+Example:Return the sum of the "Quantity" field in the "OrderDetails" table:
+
+SELECT SUM(Quantity) AS TotalItemsOrdered FROM OrderDetails;
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+28.The TAN() function returns the tangent of a number.
+
+Syntax
+TAN(number)
+Example:Return the tangent of a number:
+
+SELECT TAN(1.75);
+Output:
+
+-5.5203799225093304
+----------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------

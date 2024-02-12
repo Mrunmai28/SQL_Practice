@@ -1,0 +1,70 @@
+/*******************************************Conversion Functions****************************************/
+1.The CAST() function converts a value (of any type) into a specified datatype.
+CAST: This function is used to explicitly convert an expression from one data type to another.
+Syntax:
+
+SELECT CAST(column_name AS new_data_type) FROM table_name;
+OR:
+CAST(expression AS datatype(length))
+Example:Convert a value to an int datatype:
+
+SELECT CAST(25.65 AS int);
+Output:25
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Example
+Convert a value to a varchar datatype:
+
+SELECT CAST(25.65 AS varchar);
+Output:
+
+25.65
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Example
+Convert a value to a datetime datatype:
+
+SELECT CAST('2017-08-25' AS datetime);
+Output:
+
+2017-08-25 00:00:00.000
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+2.The CONVERT() function converts a value (of any type) into a specified datatype.
+
+CONVERT: Similar to CAST, CONVERT function converts a value from one datatype to another datatype.
+Syntax:
+
+SELECT CONVERT(new_data_type, expression) FROM table_name;
+
+OR:
+
+CONVERT(data_type(length), expression, style)
+
+Example:Convert an expression to int:
+
+SELECT CONVERT(int, 25.65);
+Output:
+25
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Example:
+Convert an expression from one data type to another (varchar):
+
+SELECT CONVERT(varchar, 25.65);
+Output:
+25.65
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Example:
+Convert an expression from one data type to another (datetime):
+
+SELECT CONVERT(datetime, '2017-08-25');
+Output:
+2017-08-25 00:00:00.000
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Example:
+Convert an expression from one data type to another (varchar):
+
+SELECT CONVERT(varchar, '2017-08-25', 101);
+Output:
+
+2017-08-25
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
