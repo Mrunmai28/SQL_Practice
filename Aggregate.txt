@@ -1,0 +1,57 @@
+/*****************************Aggregate Function*****************************************/
+
+1.COUNT(): It returns the number of rows, including rows with NULL values in a group.
+Syntax:
+
+SELECT COUNT(column_name)
+FROM table_name
+WHERE condition;
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+2.SUM(): It returns the total summed values (Non-NULL) in a set.
+Syntax:
+
+SELECT SUM(column_name)
+FROM table_name
+WHERE condition;
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+3.MAX()/MIN(): It returns the maximum(highest/largest)/minimum(lowest/smallest) value in a set.
+Syntax of MIN:
+
+SELECT MIN(column_name)
+FROM table_name
+WHERE condition;
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Syntax of MAX:
+
+SELECT MAX(column_name)
+FROM table_name
+WHERE condition;
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+4.AVG(): the average of the values in a column
+Syntax:
+
+SELECT AVG(column_name)
+FROM table_name
+WHERE condition;
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+5.ROUND(): round the values in the column
+Syntax:
+
+ROUND(number, decimals, operation);
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+6. GROUP_CONCAT(): Concatenates the values of a column from multiple rows into a single string, 
+optionally separating them with a specified delimiter.
+Syntax:
+
+SELECT GROUP_CONCAT(column_name) FROM table_name WHERE condition GROUP BY grouping_column;
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
